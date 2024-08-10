@@ -9,6 +9,15 @@ html{
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+    color: #343434;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
 header{
     position: fixed;
     background-color: #61A0BD;
@@ -17,50 +26,54 @@ header{
     top: 0;
     bottom: 0;
     left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 nav ul{
     list-style: none;
-    float: right;
     display: flex;
-    justify-content: space-around;
-    margin: 1rem;
+    padding-right: 1rem;
+
 }
 
-.header {
+nav ul li{
+    align-content: flex-end;
+    padding-left: 1rem;
+}
+
+header p {
     font-size: 2rem;
+    padding-left: 1rem;
 }
 
 main {
     margin-top: 4.5rem;
 }
 
-.about {
-    border-color: #61A0BD;
-    border-width: 5px; 
-}
-.about img{
-    float:right;
+.start {
+    display: flex;
+    flex-direction: column;
     
 }
-
-.project-flex{
+.imgSplit{
     display: flex;
     flex-direction: row;
-    flex: 40%;
-    flex-shrink: 1;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
-
-.project-image{
-    max-width: 40%;
-       
+.card {
+    width: 40%;
+    margin-left: 5%;
+    padding-left: 5%;
+    padding-top: 5rem;
+    flex-wrap: wrap;
 }
-
-.card{
-    text-align: center;
-    padding: 1rem;
-    margin: 2rem;
+#profile {
+    float: left;
+    width: auto;
+    height: 40%;
 }
 
 .skills{
@@ -68,11 +81,23 @@ main {
 }
 
 footer{
-    position: relative;
+    display: block;
+    position: fixed;
     background-color: #343434;
     color: #F5EECB;
     width: 100%;
-    height: 5rem;
+    height: 10rem;
     bottom: 0;
-    top: 0;
+    right: 0;
+}
+.contact {
+    float: right;
+    text-align: end;
+    padding-right: 1%;
+}
+.contact h3{
+    margin-bottom: 0px;
+}
+footer ul{
+    list-style: none;   
 }
