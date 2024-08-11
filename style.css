@@ -3,24 +3,19 @@
 html{
     font-size: 16px;
     font-family: "Red Hat Display", sans-serif;
-    color: #343434;
-    background-color: #F5EECB;
-    margin: 0;
-    padding: 0;
+    color: #DAF0EE;
+    background-color: #343434;
+    margin: 0px;
+    padding: 0px;
 }
 
-a{
-    text-decoration: none;
-    color: #343434;
-}
+/*Header*/
 
-a:hover{
-    text-decoration: underline;
-}
-
+/*Desktop*/
+@media screen and (min-width: 600px) {
 header{
     position: fixed;
-    background-color: #61A0BD;
+    background-color: #343434;
     width: 100%;
     height: 4.5rem;
     top: 0;
@@ -30,6 +25,48 @@ header{
     justify-content: space-between;
     align-items: baseline;
 }
+
+header a:hover{
+    text-decoration: none;
+}
+
+
+header p.mobile {
+    display: none;
+}
+
+header p.desktop {
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    header{
+        position: fixed;
+        background-color: #343434;
+        width: 100%;
+        height: 4.5rem;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header p.mobile {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+    
+    header p.desktop {
+        display: none;
+    }
+
+}
+
 
 nav ul{
     list-style: none;
@@ -43,50 +80,198 @@ nav ul li{
     padding-left: 1rem;
 }
 
-header p {
-    font-size: 2rem;
-    padding-left: 1rem;
+/*Links*/
+a{
+    text-decoration: none;
+    color: #DAF0EE;
 }
 
-main {
-    margin-top: 4.5rem;
+a:hover{
+    text-decoration: underline;
+}
+/*Body*/
+body {
+    margin-top: 5rem;
+    margin-bottom: 7rem;
 }
 
-.start {
-    display: flex;
-    flex-direction: column;
-    
-}
+/*Desktop*/
+@media screen and (min-width: 600px) {
+
+    /*Main page split*/   
 .imgSplit{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
-.card {
-    width: 40%;
-    margin-left: 5%;
-    padding-left: 5%;
-    padding-top: 5rem;
+
+.about{
+    margin-bottom: 0px;
+}
+/*Flex cards*/
+p.mobile{
+    display: none;
+}
+.card p{
+    margin-top:0px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     flex-wrap: wrap;
+    text-align: right;
+    margin: 0;
+    max-width: 30%;
+    padding: 0rem 2rem 0rem;
 }
-#profile {
-    float: left;
+
+/*Profile picture*/
+#profile.mobile {
+    display: none;
+}
+#profile.desktop {
     width: auto;
     height: 40%;
 }
-
-.skills{
-    list-style: none;
 }
 
+/*Mobile*/
+@media screen and (max-width: 600px) {
+
+.about{
+    margin-bottom: 0px;
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+/*Flex cards*/
+p.mobile{
+    margin-top:0px;
+    padding: 0rem;
+    margin: 0rem 0rem 0rem;
+    grid-column: 1 / 1;
+    grid-row: 2 / 5
+}
+p.desktop{
+    display: none;
+}
+
+.card-mobile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4rem 1fr 1fr;
+
+}
+
+/*Profile picture*/
+#profile.mobile  {
+    width: auto;
+    height: auto;
+    justify-self: end;
+    align-self: end;
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+}
+#profile.desktop  {
+    display: none;
+}
+.skills li{
+    margin: 0px;
+    text-align: right;
+   /grid-column: 2 / 2;
+    grid-row: 3 / 4;
+}
+.skills{
+    margin: 0px;
+   grid-column: 2 / 2;
+    grid-row: 3 / 4;
+}
+
+}
+
+.skills{
+    margin: 0px;
+}
+
+ul.skills{ 
+    list-style: none;
+    margin-top: 0px;
+}
+/*Desktop*/
+@media screen and (min-width: 600px) {
+    .project{
+        text-align: center;
+        padding-top: 2rem;
+    }
+    /*Project page cards*/
+    
+    .project-flex{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    
+    .project-flex .card{
+        border: 1px solid #DAF0EE;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        text-align: center;
+        margin: 0rem 1rem 0rem;
+        padding: 0rem 0rem 1rem;
+        width: 40%;
+    }
+    .card h3{
+        padding-top: 0rem;
+    }
+    
+    .card img{
+        max-width: 100%;
+    }
+    }
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+.project{
+    text-align: center;
+    padding-top: 2rem;
+}
+/*Project page cards*/
+
+.project-flex{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+.project-flex .card{
+    border: 1px solid #DAF0EE;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    text-align: center;
+    margin: 1rem 1rem 0rem;
+    padding: 0rem 0rem 1rem;
+    width: 90%;
+}
+.card h3{
+    padding-top: 0rem;
+}
+
+.card img{
+    max-width: 100%;
+    object-fit: cover;
+}
+}
+/*Footer*/
 footer{
     display: block;
     position: fixed;
+    color: #DAF0EE;
     background-color: #343434;
-    color: #F5EECB;
     width: 100%;
-    height: 10rem;
+    height: 7rem;
     bottom: 0;
     right: 0;
 }
@@ -96,8 +281,9 @@ footer{
     padding-right: 1%;
 }
 .contact h3{
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
 }
-footer ul{
-    list-style: none;   
+.contact ul{
+    list-style: none;
+    margin-top: 0rem;
 }

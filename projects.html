@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <title>Jacob Saarela - Portfolio</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="JavaScript" href="./script.js">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
      <body>
         <header>
-            <p class="header">Jacob Saarela</p>
+            <p class="desktop"><a href="./index.html">jacob saarela</a></p>
+            <p class="mobile"><a href="./index.html">jacob <br> saarela</a></p>
             <nav>
                 <ul>
-                    <li><a href="./index.html#about">About me</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                    <li><a href="./index.html#skills">Skills</a></li>
+                    <li><a href="./index.html#about">.about</a></li>
+                    <li><a href="./projects.html">.projects</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <h2 class="project">Past projects</h2>
+            <h1 class="project">past projects</h2>
             <div class="project-flex">
                 <div class="card">
-                    <img class="project-image" src="./Resources/Images/TechPet1.png" alt="Landing page for TechPet">
-                    <img class="project-image" src="./Resources/Images/TechPet2.png" alt="Product page for TechPet">
-                    <h3 class="project">TechPet</h3>
-                    <p class="project">A basic website made for a made up tech company that are focused around pets. The website is made in HTML and CSS.</p>
+                    <img id="Tech1" src="./Resources/Images/TechPet1.png" alt="Landing page for TechPet">
+                    <img id="Tech2" src="./Resources/Images/TechPet2.png" alt="Product page for TechPet">
+                    <h3>TechPet</h3>
+                    <p>A basic website made for a made up tech company that are focused around pets. <br> The website is made in HTML and CSS.</p>
                 </div>
                 <div class="card">
-                    <img class="project-image" src="./Resources/Images/CCC1.png" alt="Landing page for Celestial Cousine Collective">
-                    <img class="project-image" src="./Resources/Images/CCC2.png"alt="Events for Celestial Cousine Collective">
-                    <h3 class="project">Celestial Cousine Collective</h3>
-                    <p class="project">A website for imaginary club for people who are experimental in cooking.</p>        
+                    <img id="CCC1" src="./Resources/Images/CCC1.png" alt="Landing page for Celestial Cousine Collective">
+                    <img id="CCC2" src="./Resources/Images/CCC2.png"alt="Events for Celestial Cousine Collective">
+                    <h3>Celestial Cousine Collective</h3>
+                    <p>A website for imaginary club for people who are experimental in cooking. <br> HTML and CSS was used for this website.</p>        
                 </div>
             </div>
         </main>
         <footer>
             <div class="contact">
-                <h3 class="contact">Contact</h3>
+                <h3>.contact</h3>
                 <ul>
-                    <li>Email</li>
-                    <li>GitHub</li>
-                    <li>LinkedIn</li>
+                    <li><a href="mailto:jacobsaarela@gmail.com">.email</a></li>
+                    <li><a href="https://github.com/jcbsrl">.github</a></li>
+                    <li><a href="https://www.linkedin.com/in/jacob-saarela-151016251/">.linkedin</a></li>
                 </ul>
             </div>
         </footer> 
+        <script src="./script.js"></script>
     </body>
 </html>
